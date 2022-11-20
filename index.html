@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bản đồ số hóa phân bố một số di tích văn hóa lịch sử tiêu biểu tỉnh Thái Nguyên</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .leaflet-container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .title {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border: solid rgba(0, 0, 0, .6);
+            border-radius: 0 0 10px 10px;
+            border-width: 0 1px 1px 1px;
+            background: white;
+            text-align: center;
+            width: max-content;
+            position: fixed;
+            z-index: 999;
+        }
+        .title>p {
+            margin: 5px;
+        }
+
+        .accordion {
+            top: 50%;
+            right: -1;
+            transform: translate(0, -50%);
+            width:300px;
+            position: fixed;
+            z-index: 999;
+        }
+
+        .scroll {
+          max-height: 300px;
+          overflow: auto;
+        }
+        .shadow {
+          text-shadow: 0 0 2px #000;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="title">
+        <p><b>BẢN ĐỒ SỐ HÓA PHÂN BỐ MỘT SỐ DI TÍCH VĂN HÓA LỊCH SỬ TIÊU BIỂU TỈNH THÁI NGUYÊN</b></p>
+        <p>Tác giả: Trường THPT Lưu Nhân Chú, huyện Đại Từ - tỉnh Thái Nguyên</p>
+    </section>
+
+    <div id="map" style="width: 100%; height: 100%;"></div>
+
+    <div class="accordion" id="accordion"></div>
+    <div class="accordion" id="rightAccordion"></div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row" style="max-height: 500px;">
+                <div id="carouselPlaceholder" class="col-6"></div>
+                <div id="description" class="col-6 scroll" style="max-height: 400px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="./heritage.js"></script>
+    <script>
+        const map = L.map('map').setView([21.67, 105.72], 11);
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+        const popup = L.popup();
+        map.on('click', (e) => {
+            popup.setLatLng(e.latlng)
+                .setContent(`${e.latlng.lat} ${e.latlng.lng}`)
+                .openOn(map);
+        });
+        console.log(`${tangible.length} tangible/${intangible.length} intangible`);
+        let tags = {};
+        tangible.map(e => {
+            if (e.location && e.location.length != 0) {
+                e.marker = L.marker(e.location, {color: ""})
+                    .addTo(map)
+                    .bindPopup(e.title);
+            } else {
+                console.log(`${e.title} @ ${e.location}`);
+            }
+            if (tags[e.tag]) {
+                tags[e.tag].push(e);
+            } else {
+                tags[e.tag] = [e];
+            }
+        })
+        console.log(tags);
+        let accItems = [];
+        let key = 0;
+        for (let tag in tags) {
+          accItems.push(accItem(key++, tag, tags[tag]));
+        }
+        document.getElementById("accordion").innerHTML = accItems.join("");
+
+        function accItem(key, name, content) {
+          return `<div class="accordion-item">
+            ${accHeader(key, name)}
+            ${accBody(key, name, content)}
+          </div>`
+        }
+      
+        function accHeader(key, name) {
+          return `<h2 class="accordion-header" id="heading${key}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${key}" aria-expanded="false" aria-controls="collapse${key}">
+              ${name}
+            </button>
+          </h2>`;
+        }
+
+        function accBody(key, name, content) {
+          let list = content.map((e, i) => contentList(i, name, e)).join('');
+          return `<div id="collapse${key}" class="accordion-collapse collapse" aria-labelledby="heading${key}" data-bs-parent="#accordion">
+            <div class="accordion-body scroll">
+              <ul>${list}</ul>
+            </div>
+          </div>`
+        }
+
+        function contentList(index, name, content) {
+          return `<li>
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${name}" data-index="${index}">${content.title}</a>
+          </li>`
+        }
+
+        function carousel(images) {
+          let {indicators, inner} = carouselContent(images);
+          return `<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">${indicators}</div>
+            <div class="carousel-inner">${inner}</div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>`
+        }
+
+        function carouselContent(images) {
+          let inner = [];
+          let indicators = [];
+          for (var i = 0, l = images.length; i < l; i++) {
+            let {description, url} = images[i];
+            let inn = i == 0 ? "active" : "";
+            let ind = i == 0 ? `class="active" aria-current="true"` : "";
+            inner.push(`<div class="carousel-item ${inn}">
+              <img src="${url}" class="d-block w-100" alt="${description}">
+              <div class="carousel-caption d-none d-md-block shadow">${description}</div>
+            </div>`);
+            indicators.push(`<button type="button" data-bs-target="#carousel" data-bs-slide-to="${i}" aria-label="${description}" ${ind}></button>`);
+            
+          }
+          return {indicators: indicators.join(''), inner: inner.join('')};
+        }
+
+        function describe(text) {
+          return text.reduce((r, e) => `${r}<p>${e}</p>`, "");
+        }
+
+        var modal = document.getElementById('staticBackdrop')
+        modal.addEventListener('show.bs.modal', function (event) {
+          var button = event.relatedTarget;
+          var tag = button.getAttribute('data-tag');
+          var index = parseInt(button.getAttribute('data-index'));
+          var data = tags[tag][index];
+          modal.querySelector('.modal-title').textContent = data.title;
+          modal.querySelector('#carouselPlaceholder').innerHTML = carousel(data.images);
+          modal.querySelector('#description').innerHTML = describe(data.description);
+        })
+        // map.on('move', function(ev) {
+        //     console.log(map.getCenter()); // ev is an event object (MouseEvent in this case)
+        // });
+    </script>
+</body>
+
+</html>
