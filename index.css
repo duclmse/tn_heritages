@@ -1,0 +1,68 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.title {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: solid rgba(0, 0, 0, .6);
+    border-radius: 0 0 10px 10px;
+    border-width: 0 1px 1px 1px;
+    background: white;
+    text-align: center;
+    width: max-content;
+    position: fixed;
+    z-index: 999;
+}
+
+.title > p {
+    margin: 5px;
+}
+
+.accordion {
+    top: 50%;
+    right: -1px;
+    transform: translate(0, -50%);
+    width: 250px;
+    position: fixed;
+    z-index: 999;
+}
+
+.scroll {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.shadow {
+    text-shadow: 0 0 2px #000;
+}
+
+.carousel-item img {
+    max-height: 80vh;
+    min-width: auto;
+}
+
+.accordion-button {
+    padding: 7px;
+}
+
+.accordion-body li {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        width: fit-content;
+    }
+
+    .title .author {
+        display: none;
+    }
+
+    .accordion {
+        display: none;
+    }
+}

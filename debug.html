@@ -37,7 +37,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div id="carouselPlaceholder" class="col-6"></div>
-                        <div id="description" class="col-6 scroll" style="max-height: 500px;"></div>
+                        <div id="description" class="col-6 scroll" style="max-height: 80vh;"></div>
                     </div>
                 </div>
             </div>
@@ -51,6 +51,16 @@
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 <script src="./heritage.js"></script>
 <script src="./index.js"></script>
-</body>
+<script>
+  const popup = L.popup();
+  map.on("click", e => {
+    let {lat, lng} = e.latlng;
+    popup.setLatLng(e.latlng).setContent(`${lat}, ${lng}`).openOn(map);
+  });
+  map.on("move", function (ev) {
+    console.log(map.getCenter()); // ev is an event object (MouseEvent in this case)
+  });
+</script>
 
+</body>
 </html>

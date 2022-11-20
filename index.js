@@ -1,27 +1,29 @@
-const map = L.map("map");
+let map = L.map("map").on("click", () => toggleMarkers(null, true));
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19}).addTo(map);
 
-const popup = L.popup();
-map.on("click", (e) => popup.setLatLng(e.latlng).setContent(`${e.latlng.lat} ${e.latlng.lng}`).openOn(map));
-console.log(`${tangible.length} tangible/${intangible.length} intangible`);
+let blueIcon = icon("blue");
+let redIcon = icon("red");
+
+console.log(`${heritages.length}`);
 let tags = {};
 let markers = [];
+let showAll = true;
 let lat_min = 180, lat_max = -180, lng_min = 180, lng_max = -180;
-tangible.map(e => {
-  let {location, tag, title} = e;
+heritages.map(e => {
+  let {location, tag, title, intangible} = e;
   if (location && location.length !== 0) {
     let [lat, lng] = location;
-    let popup = L.popup().setContent(`
-        <p>${title}</p>
-        <p>
-            <span><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${tag}" data-index="${tags[tag]?.length || 0}">Chi tiết</a></span> | 
-            <span><a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank">Chỉ đường</a></span>
-        </p>`, {keepInView: true})
-    let marker = L.marker(location, {riseOnHover: true}).addTo(map).bindPopup(popup);
+    let popup = makePopup(lat, lng, tag, title);
+    let marker = intangible
+      ? L.marker(location, {icon: redIcon}).addTo(map).bindPopup(popup)
+      : L.marker(location).addTo(map).bindPopup(popup);
     marker.on("click", () => toggleMarkers(marker));
     markers.push(marker);
     e.marker = marker;
-
+    e.display = true;
+    e.ltitle = e.title.toLowerCase();
+    e.ldescription = e.description.map(e => e.toLowerCase());
+    if (!e.ltitle) console.log(`> ${e.ltitle}`);
     if (lat < lat_min) lat_min = lat;
     if (lat > lat_max) lat_max = lat;
     if (lng < lng_min) lng_min = lng;
@@ -35,17 +37,70 @@ tangible.map(e => {
     tags[tag] = [e];
   }
 });
+console.log(`========`);
 map.fitBounds([[lat_min, lng_min], [lat_max, lng_max]]);
-console.log(tags);
 let accItems = [];
 let key = 0;
 for (let tag in tags) {
   accItems.push(accItem(key++, tag, tags[tag]));
 }
-document.getElementById("accordion").innerHTML = accItems.join("");
+
+let searchForm = `<div class="accordion-item">
+  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <input class="form-control" type="text" id="search" placeholder="Search">
+  </h2>
+</div>`;
+
+document.getElementById("accordion").innerHTML = searchForm + accItems.join("");
+
+let search = document.getElementById("search");
+search.addEventListener("input", () => {
+  let input = search.value.toLowerCase();
+  heritages.forEach(h => {
+    if (!h.ltitle || !h.ldescription) return;
+    if (h.ltitle.includes(input.toLowerCase()) || h.ldescription.some(e => e.includes(input))) {
+      if (h.marker && !h.display) {
+        h.marker.addTo(map);
+        h.display = true;
+      }
+    } else if (h.display) {
+      map.removeLayer(h.marker);
+      h.display = false;
+    }
+  });
+});
+
+let modal = document.getElementById("staticBackdrop");
+modal.addEventListener("show.bs.modal", (event) => {
+  let button = event.relatedTarget;
+  let tag = button.getAttribute("data-tag");
+  let index = parseInt(button.getAttribute("data-index"));
+  let {description, images, marker, source, title, video} = tags[tag][index];
+  toggleMarkers(marker);
+  modal.querySelector(".modal-title").textContent = title;
+  modal.querySelector("#carouselPlaceholder").innerHTML = carousel(images, video);
+  modal.querySelector("#description").innerHTML = describe(description, source);
+});
+
+function icon(name) {
+  return L.icon({
+    iconUrl: `./img/marker_${name}.png`,
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
+  });
+}
+
+function makePopup(lat, lng, tag, title) {
+  return L.popup().setContent(`<p>${title}</p>
+    <p>
+        <span><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${tag}" data-index="${tags[tag]?.length || 0}">Chi tiết</a></span> | 
+        <span><a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank">Chỉ đường</a></span>
+    </p>`, {keepInView: true});
+}
 
 function accItem(key, name, content) {
-  return `<div class="accordion-item">
+  return `<div class="accordion-item ">
     ${accHeader(key, name)}
     ${accBody(key, name, content)}
   </div>`;
@@ -70,14 +125,16 @@ function accBody(key, name, content) {
 }
 
 function contentList(index, name, content) {
-  return (
-    `<li>
+  return (`<li>
       <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${name}" data-index="${index}">${content.title}</a>
-    </li>`
-  );
+    </li>`);
 }
 
-function carousel(images) {
+function carousel(images, video) {
+  if (video) {
+    return (`<iframe width="100%" height="100%" src="${video}" allowfullscreen="true" allowscriptaccess="always" ></iframe>
+      <p><a href="${video}"></ahref></p>  `);
+  }
   let {indicators, inner} = carouselContent(images);
   return `<div id="carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">${indicators}</div>
@@ -96,7 +153,7 @@ function carousel(images) {
 function carouselContent(images) {
   let inner = [];
   let indicators = [];
-  const l = images.length;
+  let l = images.length;
   for (let i = 0; i < l; i++) {
     let {description, url} = images[i];
     let inn = i === 0 ? "active" : "";
@@ -106,41 +163,23 @@ function carouselContent(images) {
       <div class="carousel-caption d-none d-md-block shadow">${description}</div>
     </div>`);
     indicators.push(`<button type="button" data-bs-target="#carousel" data-bs-slide-to="${i}" aria-label="${description}" ${ind}></button>`);
-
   }
   return {indicators: indicators.join(""), inner: inner.join("")};
 }
 
-function describe(text) {
-  return text.reduce((r, e) => `${r}<p>${e}</p>`, "");
+function describe(text, source) {
+  return text.reduce((r, e) => `${r}<p>${e}</p>`, "") + `<p><a href="${source}">Đọc thêm</a></p>`;
 }
 
-let showAll = true;
-function toggleMarkers(marker) {
-  showAll = !showAll;
+function toggleMarkers(marker, show) {
+  showAll = show || !showAll;
   for (let m of markers) {
-    if (showAll) {
+    if (show || showAll) {
       m.addTo(map);
     } else {
       map.removeLayer(m);
     }
   }
-  marker.addTo(map);
-  marker.openPopup();
+  marker?.addTo(map);
+  marker?.openPopup();
 }
-
-const modal = document.getElementById("staticBackdrop");
-modal.addEventListener("show.bs.modal", function (event) {
-  const button = event.relatedTarget;
-  const tag = button.getAttribute("data-tag");
-  const index = parseInt(button.getAttribute("data-index"));
-  const data = tags[tag][index];
-  toggleMarkers(data.marker);
-  modal.querySelector(".modal-title").textContent = data.title;
-  modal.querySelector("#carouselPlaceholder").innerHTML = carousel(data.images);
-  modal.querySelector("#description").innerHTML = describe(data.description);
-});
-
-// map.on('move', function(ev) {
-//     console.log(map.getCenter()); // ev is an event object (MouseEvent in this case)
-// });
