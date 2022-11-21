@@ -8,6 +8,7 @@ console.log(`${heritages.length}`);
 let tags = {};
 let markers = [];
 let showAll = true;
+let filter = false;
 let lat_min = 180, lat_max = -180, lng_min = 180, lng_max = -180;
 heritages.map(e => {
   let {location, tag, title, intangible} = e;
@@ -45,9 +46,12 @@ for (let tag in tags) {
   accItems.push(accItem(key++, tag, tags[tag]));
 }
 
-let searchForm = `<div class="accordion-item">
+let searchForm = `<div class="accordion-item col-xs-12 search">
   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+    <div class="input-group position-relative d-inline-flex align-items-center">
       <input class="form-control" type="text" id="search" placeholder="Search">
+      <i class="bi bi-x-lg position-absolute" style="right: 10px;cursor: pointer;z-index: 100;"></i>
+    </div>
   </h2>
 </div>`;
 
@@ -56,6 +60,10 @@ document.getElementById("accordion").innerHTML = searchForm + accItems.join("");
 let search = document.getElementById("search");
 search.addEventListener("input", () => {
   let input = search.value.toLowerCase();
+  if (!input) {
+    filter = false;
+  }
+  filter = true;
   heritages.forEach(h => {
     if (!h.ltitle || !h.ldescription) return;
     if (h.ltitle.includes(input.toLowerCase()) || h.ldescription.some(e => e.includes(input))) {
@@ -100,7 +108,7 @@ function makePopup(lat, lng, tag, title) {
 }
 
 function accItem(key, name, content) {
-  return `<div class="accordion-item ">
+  return `<div class="accordion-item">
     ${accHeader(key, name)}
     ${accBody(key, name, content)}
   </div>`;
@@ -125,8 +133,11 @@ function accBody(key, name, content) {
 }
 
 function contentList(index, name, content) {
-  return (`<li>
-      <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${name}" data-index="${index}">${content.title}</a>
+  let {title, intangible} = content;
+  return (`<li class="${intangible && "intangible"}">
+      <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${name}" data-index="${index}">
+        ${title}
+      </a>
     </li>`);
 }
 
@@ -173,6 +184,9 @@ function describe(text, source) {
 
 function toggleMarkers(marker, show) {
   showAll = show || !showAll;
+  if (filter) {
+    return;
+  }
   for (let m of markers) {
     if (show || showAll) {
       m.addTo(map);
@@ -183,3 +197,11 @@ function toggleMarkers(marker, show) {
   marker?.addTo(map);
   marker?.openPopup();
 }
+
+((cl) => {
+  const elements = document.getElementsByClassName(cl);
+  while (elements.length > 0) {
+    elements[0].parentNode.removeChild(elements[0]);
+  }
+
+})("leaflet-control-attribution");

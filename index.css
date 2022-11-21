@@ -24,8 +24,7 @@ body {
 
 .accordion {
     top: 50%;
-    right: -1px;
-    transform: translate(0, -50%);
+    right: 0;
     width: 250px;
     position: fixed;
     z-index: 999;
@@ -53,6 +52,15 @@ body {
     font-size: 0.9rem;
 }
 
+.intangible {
+    color: #881111;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion {
+        transform: translate(0, -50%);
+    }
+}
 @media screen and (max-width: 480px) {
     .title {
         width: fit-content;
@@ -62,7 +70,17 @@ body {
         display: none;
     }
 
-    .accordion {
+    .accordion .accordion-item:not(:first-child) {
         display: none;
+    }
+
+    .accordion {
+        transform: translate(0, calc(50% - 30px));
+        width: 100vw;
+        position: fixed;
+        z-index: 999;
+        bottom: calc(-50vh + 20px);
+    }
+    .search {
     }
 }
