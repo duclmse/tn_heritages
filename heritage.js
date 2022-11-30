@@ -1,7 +1,7 @@
 let heritages = [
   {
     "title": "Di tích nhà tù Chợ Chu",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Di tích Nhà tù Chợ Chu nằm ở xóm Vườn Rau, Thị trấn Chợ Chu, huyện Định Hóa, tỉnh Thái Nguyên. Năm 1889, Chợ chu bị thực dân Pháp chiếm đóng. Năm 1894, chúng đặt cơ quan đại diện cai trị vùng này. Đến năm 1916, chúng tiến hành xây dựng nhà tù.",
       "Ban đầu nhà tù làm bằng tre, gỗ đơn sơ để giam thường phạm, sau chúng giam cầm cả các chiến sỹ yêu nước tham gia cuộc Khởi nghĩa Thái Nguyên (1917) và Khởi nghĩa Yên Bái (1930). Năm 1940, Khởi nghĩa Bắc Sơn nổ ra, chúng bắt nhiều cán bộ tham gia khởi nghĩa đưa về đây giam giữ. Năm 1942, thực dân Pháp xây dựng nhà tù kiên cố, bằng gạch ngói, xi măng có thể giam giữ 200 người một lúc, trong đó có một số tù chính trị chuyển từ Căng Bá Vân, nhà tù Sơn La đến.",
@@ -27,7 +27,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm thành lập Hội Nhà báo Việt Nam",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Ngày 21-4-1950, tại xóm Roòng Khoa, xã Ðiềm Mặc, huyện Ðịnh Hóa, tỉnh Thái Nguyên đã diễn ra Đại hội thành lập Hội Những người viết báo Việt Nam, nay là Hội Nhà báo Việt Nam.",
       "Từ đó đến nay qua hơn 70 năm phát triển, Hội Nhà báo Việt Nam với tư cách là tổ chức của những người đi tiên phong trong công tác tư tưởng, những chiến sĩ lấy cây bút và trang giấy làm vũ khí, đấu tranh \"phò chính trừ tà\" (lời Chủ tịch Hồ Chí Minh). Trong mọi thành tựu của đất nước Việt Nam đều có phần đóng góp của những người làm báo và tổ chức chính trị, xã hội, nghề nghiệp của nó; trong những mặt hệ thống chính trị nước ta chưa làm được hoặc phạm sai lầm, thiếu sót, đều có phần trách nhiệm của những người làm báo Việt Nam và Hội Nhà báo Việt Nam.",
@@ -48,7 +48,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm thành lập UB Hòa Bình Việt Nam",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Địa điểm thành lập Uỷ ban bảo vệ hoà bình thế giới của Việt Nam, (nay là Uỷ ban hoà bình Việt Nam) ngày 19/11/1950 là xóm Roòng Khoa, xã Thanh Định (nay là xã Điền Mặc), huyện Định Hoá, tỉnh Thái Nguyên.",
       "Hồ Chủ tịch giao nhiệm vụ cho đồng chí Xuân Thuỷ (thường trực Tổng bộ Việt Minh, Tổng biên tập Báo Cứu quốc…) chủ trì hội nghị thành lập. Đến dự có Tổng bí thư Trường Chinh, đồng chí Hoàng Quốc Việt, Tôn Đức Thắng, Lê Đình Thám, Dương Bạch Mai, linh mục Phạm bá Trực. Và 54 đại biểu đại diện cho đoàn thể, tầng lớp nhân dân; tham dự còn có đại biểu của phong trào kháng chiến Lào do hoàng thân Xuphanuvông dân đầu và đại diện của Cam pu chia.",
@@ -71,7 +71,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm thành lập UB Kiểm tra Trung ương",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Di tích địa điểm thành lập Ủy ban Kiểm tra Trung ương nằm trên đồi Pụ Miếu, xã Điềm Mặc, là nơi thành lập, đặt trụ sở đặt trụ sở đầu tiên của Uỷ ban kiểm tra Trung ương Đảng.",
       "Vào ngày 16/10/1948, Ban Thường vụ TW Đảng ra Nghị quyết thành lập Ban Kiểm tra Trung ương do đồng chí Trường Chinh ký. Ban đầu, chỉ có 3 thành viên chuyên trách và một số cán bộ giúp việc. Tại đây, chủ nhiệm Ủy ban Kiểm tra, đồng chí Trần Đăng Ninh cùng các bộ đã ở và làm việc trong căn nhà dài trên 20m, ngăn thành từng gian, có 1,2 gian cùng văn thư, hành chính, hậu cần. Sau đó, các phái viên được bổ sung dần và thời kỳ đông nhất có 23 đồng chí được điều động từ các Ban Thường vụ Tỉnh ủy từ Liên khu V trở ra như: Lê Thanh, Đặng Việt Lâm, Hoàng Phú, Mai Công Thiệp, Trần Tấn, Trần Linh, Nguyễn Thành Tân, Nguyễn Danh Phan, Trần Thọ, Lê Quang Hợp, Hà Văn Tuyên, Hoàng Điền, Bùi Khiết, Tạ Quang, Lê Công Hoạch, Vũ Minh, Quang Sơn, Kỳ Nam, Nguyễn Hữu Lê đồng chí Thuần và Nhiên.",
@@ -89,7 +89,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm di tích nơi ở và làm việc của Tổng Bí thư Trường Chinh",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Địa điểm: Bản Nà Mòn, xã Phú Đình, huyện Định Hóa, tỉnh Thái Nguyên",
       "Kháng chiến toàn quốc bùng nổ (19/12/1946). Thực hiện đường lối kháng chiến toàn dân, toàn diện, trường kỳ và tự lực cánh sinh chống thực dân Pháp xâm lược. Tổng Bí thư Trường Chinh, Văn phòng Trung ương Đảng rời thủ đô Hà Nội lên An Toàn Khu (ATK) Định Hoá, tỉnh Thái Nguyên, cùng Chủ tịch Hồ Chí Minh, Chính phủ lãnh đạo cuộc kháng chiến bảo vệ độc lập dân tộc.",
@@ -123,7 +123,7 @@ let heritages = [
   },
   {
     "title": "Nơi Chủ tịch Hồ Chí Minh ở và làm việc tại đồi Khau Tí năm 1947",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Di tích Khau Tý thuộc xã Điềm Mặc, huyện Định Hóa. Đây là địa điểm đầu tiên Chủ tịch Hồ Chí Minh đến ở, làm việc tại ATK Định Hóa để lãnh đạo cuộc kháng chiến chống thực dân Pháp (1947-1954). Từ thành phố Thái Nguyên ngược theo quốc lộ số 3 đi Bắc Cạn, đến km31, rẽ trái 19km tới ngã ba Quán Vuông, rẽ trái đi tiếp 10km theo đường nhựa, cách chợ Điềm Mặc 400m, rẽ trái theo đường liên xã 900m là đến di tích Khau Tý nơi Bác ở và làm việc.",
       "Căn lán nhỏ, đơn sơ nằm trên một khoảng đất bằng được thiết kế theo mô hình nhà sàn của đồng bào Tày. Tuy nhiên căn lán có một số chi tiết khác biệt để phù hợp với yêu cầu cách mạng. Vị trí tiếp giáp với mặt đất rất ngắn và có cửa hậu phía sau nhà. Theo đồng bào nơi đây, đó là cách bố trí để khi có sự biến, có thể nhảy xuống nhanh hoặc rút theo lối cửa sau.",
@@ -147,7 +147,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm di tích báo QĐND ra số đầu 20/10/1950",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Địa chỉ: Thôn Khau Diều, xã Định Biên, huyện Định Hoá",
       "Sau khi thực dân Pháp bội ước, tiến đánh nước ta lần thứ 2, năm 1947, Chủ tịch Hồ Chí Minh, Trung ương Đảng, Chính phủ và Bộ quốc phòng chuyển lên căn cứ địa Việt Bắc và An toàn khu Định Hoá trở thành trung tâm Thủ đô kháng chiến. Nhiều cơ quan Trung ương như Bộ Tổng Tham mưu, Tổng cục Chính trị đã ở và làm việc tại nhiều xã của huyện Định Hoá, trong đó có xã Định Biên.",
@@ -172,7 +172,7 @@ let heritages = [
   },
   {
     "title": "Nơi thành lập Việt Nam Giải phóng quân",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Địa điểm: Làng Quặng – Định Biên – Định Hóa – Thái Nguyên",
       "Trong thời kỳ cách mạng tháng 8/1945, ngôi đình làng Quặng ngày xưa là chỗ đi lại, hội họp của các cán bộ Việt Minh năm xưa. Nơi đây đã chứng kiến một sự kiện lịch sử đó là lễ thành lập \"Việt Nam giải phóng quân\" vào ngày 15/5/1945. Đây là đơn vị chủ lực đầu tiên của Đảng ta, là kết quả một quá trình đấu tranh cách mạng kiên cường, bền bỉ của nhân dân ta, là sự phát triển trưởng thành của lực lượng vũ trang dưới sự lãnh đạo sáng suốt của Đảng và lãnh tụ Hồ Chí Minh.",
@@ -204,7 +204,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm cơ quan Bộ tổng tư lệnh QĐND Việt Nam",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Địa điểm di tích Cơ quan Bộ Tổng tư lệnh Quân đội nhân dân Việt Nam (1949-1954) thuộc xóm Bảo Biên, xã Bảo Linh, huyện Định Hoá.",
       "Di tích nằm trong một thung lũng nhỏ hẹp, bao quanh là núi rừng rất kín đáo, tiện lợi cho việc giữ bí mật nhưng cũng thuận lợi cho việc liên lạc đI các hướng. Từ đây có thể đi Chợ Chu, xuống Thái Nguyên, lên Chợ Đồn (Bắc Kạn), sang Sơn Dương (Tuyên Quang) một cách dễ dàng.",
@@ -230,7 +230,7 @@ let heritages = [
   },
   {
     "title": "Cụm di tích Chủ tịch Hồ Chí Minh ở Khuôn Tát",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Trong quần thể di tích Quốc gia đặc biệt ATK Định Hóa, không thể không nhắc tới Khuôn Tát - nơi Chủ tịch Hồ Chí Minh đã từng ở và làm việc trong giai đoạn 1947-1954.",
       "Cụm di tích này gồm: Cây đa, suối Khuôn Tát, nhà sàn và hầm Bác ở tại đồi Na Đình. Theo tiếng địa phương, Khuôn Tát có nghĩa là thung lũng có thác nước chảy. Dòng suối Khuôn Tát bắt nguồn từ dãy núi Hồng, chảy qua xã Phú Đình đã tạo nên một bức tranh phong cảnh hài hòa, với điểm nhấn là thác nước 7 tầng. Thời kỳ tiền kháng chiến, nơi đây là rừng rậm, núi non trùng điệp. Từ Khuôn Tát, di chuyển bằng ngựa chỉ 5-6km vượt qua núi Hồng là đến Tân Trào (Tuyên Quang); xuôi theo dòng suối xuống phía dưới là đồi Tỉn Keo, rồi xa hơn nữa là đồi Khau Tý (Điềm Mặc), cùng những nơi làm việc của cơ quan Trung ương Đảng, Chính phủ, Bộ Quốc phòng… Địa thế rất thuận lợi đó của Khuôn Tát đã được Bác lựa chọn là một trong những nơi thường xuyên lui tới ở và làm việc.",
@@ -258,7 +258,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm di tích Chủ tịch Hồ Chí Minh ở Tỉn Keo",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Đồi Tỉn Keo dưới chân đèo De, núi Hồng thuộc xóm Nà Lọm, xã Lục Giã, An Toàn Khu (ATK) Định Hoá, nay thuộc xóm Tỉn Keo, xã Phú Đình, huyện Định Hoá, tỉnh Thái Nguyên nằm ở trung tâm \"Thủ đô gió ngàn\", với \"Địa lợi, nhân hòa\" đáp ứng tiêu chí của Chủ tịch Hồ Chí Minh nhắc các đồng chí bảo vệ, giúp việc khi tìm địa điểm đặt cơ quan",
       "Bác ở đồi Tỉn Keo cách nơi ở, làm việc của Phó Thủ tướng Phạm Văn Đồng ở Đồi Thẩm Khen 1,8km, cách chỗ Tổng Bí thư Trường Chinh ở Nà Mòn độ 3km. (đều ở xã Lục Giã)… Từ tỉn Keo ngược lên 1,2km đến thác 7 tầng – Khuôn Tát, vượt đèo De (núi Hồng) sang Tân Trào (Sơn Dương, tỉnh Tuyên Quang) chỉ hơn 1 tiếng đồng hồ đi bộ. Nơi Bác ở chỉ có lác đác 5 – 7 nóc nhà nhỏ ẩn hiện.",
@@ -283,7 +283,7 @@ let heritages = [
   },
   {
     "title": "Di tích Đồi Pụ Đồn (đồi phong tướng)",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Đồi Pụ Đồn (hay còn gọi là đồi phong tướng), thuộc xóm Tỉn Keo, xã Phú Đình (Định Hóa). Nơi đây, đồng chí Võ Nguyên Giáp là người đầu tiên của Quân đội Nhân dân Việt Nam được phong hàm Đại tướng và Thái Nguyên vinh dự là Lễ thụ phong lịch sử này.",
       "Nhiều năm nay, nơi đây đã trở thành địa chỉ đỏ để giáo dục truyền thống cách mạng cho các thế hệ, là niềm tự hào của người dân vùng ATK.",
@@ -320,7 +320,7 @@ let heritages = [
   },
   {
     "title": "Thắng cảnh thác Khuôn Tát",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Thác Khuôn Tát là một thắng cảnh của Thái Nguyên. Thác nằm trên địa phận xóm Tỉn Keo, xã Phú Đình, huyện Định Hóa và cách trung tâm thành phố Thái Nguyên gần 70km.",
       "Thác Khuôn Tát thuộc khu vực di tích lịch sử ATK Định Hóa, là trung tâm căn cứ địa Việt Bắc và đại bản doanh lãnh đạo cuộc kháng chiến trường kỳ do chủ tịch Hồ Chí Minh lãnh đạo trong chiến tranh chống thực dân Pháp (1946-1954). Thác Khuôn Tát được xếp hạng danh thắng cấp quốc gia vào năm 2002.",
@@ -343,7 +343,7 @@ let heritages = [
   },
   {
     "title": "Địa điểm trường Nguyễn Ái Quốc (1949)",
-    "tag": "Định Hóa (ATK)",
+    "tag": "Định Hóa",
     "description": [
       "Từ đường tròn trung tâm thành phố Thái Nguyên theo quốc lộ 3 đi Bắc Kạn đến km 31, rẽ trái theo đường 254 vào ngã ba Quán Vuông, xã Trung Hội rẽ trái đi theo đường vào Khu di tích lịch sử – Sinh thái ATK Định Hóa, đến ngã ba Bình Yên rẽ trái đến xóm Làng Luông, xã Bình Thành, huyện Định Hóa là di tích Trường Đảng Nguyễn Ái Quốc.",
       "Lịch sử ghi lại, đầu năm 1949, Trường Đảng Nguyễn Ái Quốc (nay là Học viện Chính trị quốc gia Hồ Chí Minh) đã khai giảng khóa học đầu tiên và trở thành Trường huấn luyện cán bộ thường xuyên của Trung ương Đảng, đánh dấu bước phát triển mới mang tính bước ngoặt trong công tác huấn luyện, đào tạo cán bộ của Đảng.",
@@ -577,9 +577,10 @@ let heritages = [
       "Trong 04 năm đóng quân tại đây, Cục Quân khí đã tham mưu cho Tổng cục Cung cấp, Tổng Quân ủy, Bộ Tổng Tư lệnh xây dựng và ngành Quân khí toàn quân bảo đảm quân khí cho các Chiến dịch: Chiến dịch Đông Xuân (1951 -1952), Chiến dịch Thu - Đông (1952), Chiến dịch Thượng Lào (Xuân - Hè 1953), Chiến cuộc Đông Xuân (1953 - 1954) và Chiến dịch Điện Biên Phủ. Cũng trong thời gian này, Cục Quân khí đã triển khai xây dựng hệ thống kho Quân khí các cấp, thực hiện nhiệm vụ tiếp nhận, bảo quản, cung cấp một khối lượng lớn sản phẩm vũ khí, khí tài, đạn dược cho lực lượng vũ trang nhân dân trên các chiến trường. Trong nhiều chiến dịch lớn, đỉnh cao là Chiến dịch Điện Biên Phủ lịch sử, ngành Quân khí đã cung cấp cho bộ đội trên 17 nghìn tấn vũ khí đạn dược, góp phần quan trọng cùng quân và dân cả nước làm nên chiến thắng lịch sử \"lừng lẫy năm châu, chấn động địa cầu\" và đã thực hiện tốt lời căn dặn của Chủ tịch Hồ Chí Minh với ngành Quân khí:\"Vũ khí là mồ hôi, nước mắt của đồng bào, là xương máu của bộ đội, vì vậy phải quý trọng nó, phải tiết kiệm, ngăn nắp, phải sử dụng hợp lý\".",
       "Đây là địa điểm ghi dấu Cơ quan Cục Quân khí (1951 - 1954) đóng và làm việc trong thời kỳ kháng chiến chống thực dân Pháp, giúp chúng ta nghiên cứu, tìm hiểu về quá trình hình thành và trưởng thành của ngành Quân khí; là nơi tham quan, ôn lại truyền thống của ngành Quân khí trong những năm tháng gian khổ nhưng đầy hào hùng của cán bộ, chiến sĩ Cục Quân khí; là đối tượng để tìm hiểu về lịch sử của ngành Quân khí trong thời kỳ kháng chiến chống thực dân Pháp xâm lược; là địa điểm thuộc quần thể các di tích lịch sử ATK Định Hóa trong thời kỳ kháng chiến chống thực dân Pháp.",
       "Lịch sử ra đời và hoạt động của cơ quan Cục Quân khí trong 04 năm cuối cuộc kháng chiến chống thực dân Pháp, gắn với các đồng chí: Trần Thùy, quyền Cục trưởng Cục Quân khí (1951 - 1952); Phan Tử Lăng, quyền Cục trưởng Cục Quân khí (1952 - 1953); Nguyễn Văn Nam, Cục trưởng Cục Quân khí (1953 -1958); Hoàng Xuân, Cục phó Cục Quân khí (1954 - 1955).",
-      "Hiện nay, còn nền lán, hầm hào, giếng nước… trên đồi Nặm Bó, dài khoảng 20m, chiều rộng 5m hướng về phía Tây; bên phải, cách nền lán khoảng 25m có dấu tích hầm trú ẩn; phía Tây là dấu tích giếng nước; sườn đồi phía Nam là dấu tích hầm cất giấu vũ khí có độ sâu 2,5m, chiều rộng 1,5m, dài 10m; cạnh đó có dấu tích hầm dài 03m, rộng 1,5m. Vào ngày 10/3/2004, Cục Quân khí (Tổng Cục Kỹ thuật, Bộ Quốc phòng) đã làm lễ khởi công các hạng mục: Nhà văn hóa, bia di tích, sân, đường, tường rào. Công trình hoàn thành vào ngày 19/8/2004, bàn giao cho Ủy ban nhân xã Lam Vỹ quản lý, sử dụng.",
+      "Hiện nay, còn nền lán, hầm hào, giếng nước… trên đồi Nặm Bó, dài khoảng 20m, chiều rộng 5m hướng về phía Tây; bên phải, cách nền lán khoảng 25m có dấu tích hầm trú ẩn; phía Tây là dấu tích giếng nước; sườn đồi phía Nam là dấu tích hầm cất giấu vũ khí có độ sâu 2,5m, chiều rộng 1,5m, dài 10m; cạnh đó có dấu tích hầm dài 03m, rộng 1,5m. Vào ngày 10/3/2004, Cục Quân khí (Tổng Cục Kỹ thuật, Bộ Quốc phòng) đã làm lễ khởi công các hạng mục: Nhà văn hóa, bia di tích, sân, đường, tường rào. Công trình hoàn thành vào ngày 19/8/2004, bàn giao cho Ủy ban nhân dân xã Lam Vỹ quản lý, sử dụng.",
       "Với những giá trị nêu trên, Địa điểm đóng quân của Cục Quân khí (1951 -1954), tỉnh Thái Nguyên được Bộ trưởng Bộ Văn hóa, Thể thao và Du lịch xếp hạng là Di tích lịch sử quốc gia tại Quyết định số 1898/QĐ-BVHTTDL ngày 18/6/2021",
     ],
+    "images": [],
     "location": [21.8513, 105.5783],
   },
   {
@@ -1610,13 +1611,13 @@ let heritages = [
   },
 
   {
-    "title": "Nhảy Tắc xình - dân tộc Sán Dìu (xóm Đồng Tâm, xã Tức Tranh, huyện Phú Lương)",
+    "title": "Nhảy Tắc xình - dân tộc Sán Dìu (huyện Phú Lương)",
     "tag": "Phú Lương",
     "intangible": true,
     "location": [21.7058032, 105.7813092],
     "description": [
       "Múa Tắc Xình hay còn gọi là Múa cầu mùa thể hiện ước nguyện của con người, cầu thời tiết thuận lợi, muôn loài sinh sôi, lúa ngô được mùa, cầu cho bản làng bình yên, hạnh phúc. Đó cũng là vũ điệu thể hiện đạo lý tưởng nhớ tổ tiên, là cầu nối tâm linh giữa đất trời và lòng người, cõi sống và cõi chết, thế hệ trước và thế hệ sau, thắp lên niềm tin, khát vọng chinh phục thiên nhiên của người dân lao động.",
-      "Múa Tắc Xình hội tụ đủ các yếu tố của trình thức biểu diễn dân gian thể hiện ở chỗ: ",
+      "Múa Tắc Xình hội tụ đủ các yếu tố của trình thức biểu diễn dân gian thể hiện ở chỗ:",
       "+ Phục trang cho Múa Tắc Xình nguyên gốc.",
       "+ Nhạc cụ phục vụ Múa Tắc Xình chủ yếu là bộ gõ bằng tre, nứa là các vật dụng phù hợp với điều kiện tự nhiên sản sinh ra điệu múa và phù hợp trong không gian văn hóa của đồng bào Sán Chay.",
       "+ Âm nhạc cho Múa Tắc Xình tiết tấu âm nhạc đơn giản, nguyên sơ không pha tạp các tiết tấu âm nhạc hiện đại.",
@@ -1653,7 +1654,7 @@ let heritages = [
     "video": "https://www.youtube.com/embed/1iG4uZIGtns",
   },
   {
-    "title": "Hát Soọng cô - dân tộc Sán Dìu (xóm Tam Thái, xã Hóa Thượng, huyện Đồng Hỷ)",
+    "title": "Hát Soọng cô - dân tộc Sán Dìu (huyện Đồng Hỷ)",
     "tag": "Đồng Hỷ",
     "location": [21.6641728, 105.9310965],
     "intangible": true,
@@ -1665,8 +1666,8 @@ let heritages = [
     "video": "https://www.youtube.com/embed/Ah3P4y7Et24",
   },
   {
-    "title": "Nghi lễ Hét khoăn - dân tộc Nùng (xã Hòa Bình, xã Văn Hán, huyện Đồng Hỷ)",
-    "tag": "Định Hóa",
+    "title": "Nghi lễ Hét khoăn - dân tộc Nùng (huyện Đồng Hỷ)",
+    "tag": "Đồng Hỷ",
     "location": [21.8766307, 105.5965431],
     "intangible": true,
     "description": [
@@ -1678,7 +1679,7 @@ let heritages = [
     "video": "https://www.youtube.com/embed/zkIQAoS0aog",
   },
   {
-    "title": "Múa Rối cạn - dân tộc Tày (xã Bình Yên và Đồng Thịnh, huyện Định Hóa)",
+    "title": "Múa Rối cạn - dân tộc Tày (huyện Định Hóa)",
     "tag": "Định Hóa",
     "location": [21.9664059, 105.7012019],
     "intangible": true,
@@ -1691,7 +1692,7 @@ let heritages = [
     "video": "https://www.youtube.com/embed/g0zzW3qoKL4",
   },
   {
-    "title": "Nghi lễ Then - dân tộc Tày (xã Lam Vỹ, huyện Định Hóa)",
+    "title": "Nghi lễ Then - dân tộc Tày (huyện Định Hóa)",
     "tag": "Định Hóa",
     "location": [21.7967566, 105.5385895],
     "intangible": true,
@@ -1708,7 +1709,7 @@ let heritages = [
   },
   {
     "title": "Lễ hội Lồng Tồng - dân tộc Tày (huyện Định Hóa)",
-    "tag": "Đồng Hỷ",
+    "tag": "Định Hóa",
     "location": [21.7484364, 105.8788387],
     "intangible": true,
     "description": [
@@ -1770,7 +1771,7 @@ let heritages = [
     "video": "https://www.youtube.com/embed/k3Vat08A2x4",
   },
   {
-    "title": "Hát Pả dung (Páo Dung) - dân tộc Dao (xã Phúc Chu, huyện Định Hóa và xã Yên Ninh, huyện Phú Lương)",
+    "title": "Hát Pả dung (Páo Dung) - dân tộc Dao (huyện Định Hóa và Phú Lương)",
     "tag": "Phú Lương",
     "location": [21.9143993, 105.6154968],
     "intangible": true,

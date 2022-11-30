@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+li {
+    cursor: pointer;
+}
+
 .title {
     top: 0;
     left: 50%;
