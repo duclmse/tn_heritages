@@ -1,34 +1,34 @@
 let map = L.map("map").on("click", () => toggleMarkers(null, true));
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19}).addTo(map);
 
-let blueIcon = icon("blue");
 let redIcon = icon("red");
+let blueIcon = icon("blue");
 
 console.log(`${heritages.length}`);
 let tags = {};
 let markers = [];
 let showAll = true;
 let filter = false;
-let lat_min = 180, lat_max = -180, lng_min = 180, lng_max = -180;
 heritages.map(e => {
   let {location, tag, title, intangible} = e;
   if (location && location.length !== 0) {
     let [lat, lng] = location;
     let popup = makePopup(lat, lng, tag, title);
-    let marker = intangible
-      ? L.marker(location, {icon: redIcon}).addTo(map).bindPopup(popup)
-      : L.marker(location).addTo(map).bindPopup(popup);
-    marker.on("click", () => toggleMarkers(marker));
+    let marker = L.marker(location, {icon: intangible ? redIcon : blueIcon}).addTo(map).bindPopup(popup);
+    marker.selected = false;
+    marker.on("click", () => {
+      marker.selected = true;
+      toggleMarkers(marker);
+    });
+    marker.on("mouseover", () => marker.openPopup());
+    marker.on("mouseout", () => {
+      if (!marker.selected) marker.closePopup();
+    });
     markers.push(marker);
     e.marker = marker;
     e.display = true;
     e.ltitle = e.title.toLowerCase();
     e.ldescription = e.description.map(e => e.toLowerCase());
-    if (!e.ltitle) console.log(`> ${e.ltitle}`);
-    if (lat < lat_min) lat_min = lat;
-    if (lat > lat_max) lat_max = lat;
-    if (lng < lng_min) lng_min = lng;
-    if (lng > lng_max) lng_max = lng;
   } else {
     console.log(`${title} @ ${location}`);
   }
@@ -39,7 +39,7 @@ heritages.map(e => {
   }
 });
 console.log(`========`);
-map.fitBounds([[lat_min, lng_min], [lat_max, lng_max]]);
+map.fitBounds([[21.32526588, 105.47750854], [22.04762459, 106.23783875]]);
 let accItems = [];
 let key = 0;
 for (let tag in tags) {
@@ -90,12 +90,19 @@ modal.addEventListener("show.bs.modal", (event) => {
   modal.querySelector("#description").innerHTML = describe(description, source);
 });
 
+modal.addEventListener('hide.bs.modal', () => {
+  modal.querySelector("#carouselPlaceholder").innerHTML = "";
+})
+
 function icon(name) {
   return L.icon({
-    iconUrl: `./img/marker_${name}.png`,
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32],
+    iconUrl: `./img/marker-${name}.png`,
+    shadowUrl: `./img/marker-shadow.png`,
+    iconSize: [25, 41],
+    iconAnchor: [12.5, 41],
+    popupAnchor: [0.5, -35],
+    shadowSize: [41, 41],
+    shadowAnchor: [12, 41],
   });
 }
 
@@ -143,9 +150,10 @@ function contentList(index, name, content) {
 
 function carousel(images, video) {
   if (video) {
-    return (`<iframe width="100%" height="100%" src="${video}" allowfullscreen="true" allowscriptaccess="always" ></iframe>
+    return (`<iframe width="100%" height="100%" src="${video}" allowfullscreen></iframe>
       <p><a href="${video}"></ahref></p>  `);
   }
+  if (!images) return "";
   let {indicators, inner} = carouselContent(images);
   return `<div id="carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">${indicators}</div>
@@ -164,6 +172,7 @@ function carousel(images, video) {
 function carouselContent(images) {
   let inner = [];
   let indicators = [];
+  if (!images) return;
   let l = images.length;
   for (let i = 0; i < l; i++) {
     let {description, url} = images[i];

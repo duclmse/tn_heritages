@@ -16,7 +16,7 @@ let heritages = [
     "location": [21.9127322, 105.6470439],
     "images": [
       {
-        "url": "https://dinhhoa.thainguyen.gov.vn/documents/241342/248973/Di+tich+Nha+tu+Cho+Chu+02.jpg/b1640d3f-c985-4995-8f97-b97d3f8d34d4?t=1510794972609",
+        "url": "./img/di-tich-nha-tu-cho-chu-1.jpg",
         "description": "Cổng chính vào Di tích Nhà tù Chợ Chu",
       },
       {
@@ -192,7 +192,7 @@ let heritages = [
         "description": "Di tích đình làng Quặng",
       },
       {
-        "url": "http://atkthainguyen.org.vn/wp-content/uploads/2017/12/%C4%90%C3%8CNH-LQ-C%C3%82Y-%C4%90A.jpg",
+        "url": "./img/cay-da-lang-quang.jpg",
         "description": "Đình và cây đa làng Quặng",
       },
       {
@@ -723,6 +723,7 @@ let heritages = [
     "tag": "Đại Từ",
     "source": "https://baothainguyen.vn/chinh-tri/201712/hung-son-hai-lan-don-bac-ve-tham-3673EE6/",
     "description": [
+      "Địa điểm: cánh đồng Cầu Thành (năm 1954); nhà ông Thịnh xóm Cầu Thành xã Hùng Sơn (năm 1958)",
       "Ngày 14/9/1954, nhân dân trong xã vinh dự được đón Bác Hồ về thăm, gặp gỡ và động viên bà con nhân dân sản xuất. Từ một số Tổ đổi công hoạt động tốt, đến giữa năm 1955, huyện Đại Từ đã xây dựng Hợp tác xã thí điểm như Hợp tác xã Cầu Thành, xã Hùng Sơn. Nhận được báo cáo về tình hình sản xuất đạt kết quả cao của Tổ đổi công và Hợp tác xã tại Hùng Sơn, ngày 2/3/1958, Chủ tịch Hồ Chí Minh cùng đoàn cán bộ đã về thăm nhân dân xã Hùng Sơn lần thứ 2.",
       "Việc công nhận địa điểm Chủ tịch Hồ CHí Minh về thăm xã Hùng Sơn, huyện Đại Từ là di tích lịch sử quốc gia là niềm vinh dự, tự hào; đồng thời khẳng định truyền thống của quê hương cách mạng - cửa ngõ thủ đô gió ngàn của Đảng bộ, chính quyền, nhân dân các dân tộc huyện Đại Từ nói riêng và tỉnh Thái Nguyên nói chung.",
     ],
@@ -859,7 +860,7 @@ let heritages = [
     "title": "Địa điểm Trường dạy làm báo Huỳnh Thúc Kháng",
     "tag": "Đại Từ",
     "description": [
-      "Địa điểm tại xã Tân Thái, huyện Đại Từ (tỉnh Thái Nguyên),",
+      "Địa điểm tại xóm Gốc Mít, xã Tân Thái, huyện Đại Từ (tỉnh Thái Nguyên),",
       "Ngày 4/4/1949 theo đề nghị của Chính phủ và Chủ tịch Hồ Chí Minh, trường dạy làm báo được mở ở chiến khu Việt Bắc. Ngôi trường dạy làm báo chuyên nghiệp đầu tiên của nước ta được Bác Hồ đặt theo tên vị lão thành yêu nước, nhà viết báo lâu năm Huỳnh Thúc Kháng.",
       "Lớp học đầu tiên diễn ra trong 3 tháng, gồm 42 học viên là cán bộ chính trị, quân sự, báo chí của cả nước gửi về, đã được nhiều đồng chí lãnh đạo giàu kinh nghiệm chính trị và phong phú lý luận, thực tiễn đích thân giảng dạy.",
       "Trong số những giảng viên của trường có những tên tuổi lớn của lịch sử Việt Nam như: Trường Chinh, Võ Nguyên Giáp, Hoàng Quốc Việt, Lê Quang Đạo, Tố Hữu, Nguyễn Thành Lê, Nguyễn Đình Thi, Nguyễn Huy Tưởng, Xuân Diệu, Nam Cao, Thế Lữ, Nguyễn Tuân, Quang Đạm…",
@@ -868,7 +869,7 @@ let heritages = [
       "Đội ngũ 43 học viên và 29 giảng viên của trường dạy làm báo Huỳnh Thúc Kháng chính là những viên gạch đầu tiên đặt nền móng vững chắc cho sự phát triển và trưởng thành của báo chí cách mạng Việt Nam suốt những năm qua; mở ra kỷ nguyên mới cho lịch sử báo chí Việt Nam.",
       "Ngày 4/4/2019, tại xã Tân Thái, huyện Đại Từ (tỉnh Thái Nguyên), Hội Nhà báo Việt Nam phối hợp với UBND tỉnh Thái Nguyên tổ chức Lễ kỉ niệm 70 năm Trường Dạy làm báo Huỳnh Thúc Kháng và đón nhận bằng Di tích lịch sử cấp Quốc gia.",
     ],
-    "location": [21.589265, 105.693713],
+    "location": [21.7333568,105.7392653],
     "images": [
       {
         "url": "https://dulichthongminhthainguyen.vn/storage/places/July2022/218.jpg",
@@ -1497,17 +1498,6 @@ let heritages = [
     "source":
       "https://phoyen.thainguyen.gov.vn/di-tich-lich-su/-/asset_publisher/x2qR6wPFecJP/content/-en-muc-va-chua-huong-ap-xa-tien-phong-uoc-xep-hang-di-tich-quoc-gia-",
   },
-  {
-    "title": "Hang Ốc",
-    "tag": "Phổ Yên",
-    "description": [
-      "Tại hang Ốc - nơi có diện tích hơn 100m2, Đoàn khảo cổ đã phát hiện và sưu tầm được hơn 300 di vật đá cùng rất nhiều vỏ ốc bị chặt đuôi, xương, răng động vật và các loại như công cụ chặt thô, nạo, dao, cuốc…",
-      "Kết quả nghiên cứu bước đầu cho thấy đây là dấu tích của người tiền sử có niên đại ít nhất cách đây từ 7.000 đến 8.000 năm; những vỏ ốc bị chặt đuôi, xương động vật là những tàn tích thức ăn của người xưa. Ngoài ra, đoàn khảo cổ cũng phát hiện được những mảnh gốm thời kim khí chứng tỏ hang được sử dụng làm nơi cư trú của cư dân thời đại kim khí cách thời đại ngày nay khoảng 3.000 năm.",
-      "Theo các nhà khảo cổ, đây là di tích rất quan trọng, cần được quan tâm khai quật cũng như bảo tồn bởi hang Ốc có tầng lớp văn hóa dầy, chứa đựng những hiện vật của nhiều thời đại, hứa hẹn sẽ cung cấp những nhận thức mới về sự phát triển liên tục của văn hóa tiền sử Thái Nguyên và Việt Nam...",
-    ],
-    "source": "https://cand.com.vn/Xa-hoi/Thai-Nguyen-Phat-hien-nhieu-di-vat-co-tai-huyen-Vo-Nhai-i107157/",
-  },
-
   {
     "title": "Hang Phượng Hoàng, suối Mỏ Gà",
     "tag": "Võ Nhai",
