@@ -1,5 +1,6 @@
-let map = L.map("map").on("click", () => toggleMarkers(null, true));
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19}).addTo(map);
+let map = L.map("map").on("click", () => toggleAllMarkers(null, true));
+let tileOptions = {maxZoom: 19, minZoom: 10, bounds: L.latLngBounds([21, 104], [22.5, 107])};
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", tileOptions).addTo(map);
 
 let redIcon = icon("red");
 let blueIcon = icon("blue");
@@ -18,9 +19,11 @@ heritages.map(e => {
     marker.selected = false;
     marker.on("click", () => {
       marker.selected = true;
-      toggleMarkers(marker);
+      toggleAllMarkers(marker);
     });
-    marker.on("mouseover", () => marker.openPopup());
+    marker.on("mouseover", () => {
+      if (!marker.selected) marker.openPopup();
+    });
     marker.on("mouseout", () => {
       if (!marker.selected) marker.closePopup();
     });
@@ -38,8 +41,8 @@ heritages.map(e => {
     tags[tag] = [e];
   }
 });
-console.log(`========`);
-map.fitBounds([[21.32526588, 105.47750854], [22.04762459, 106.23783875]]);
+
+map.fitBounds([[21.3, 105.4], [22.1, 106.3]]);
 let accItems = [];
 let key = 0;
 for (let tag in tags) {
@@ -84,15 +87,15 @@ modal.addEventListener("show.bs.modal", (event) => {
   let tag = button.getAttribute("data-tag");
   let index = parseInt(button.getAttribute("data-index"));
   let {description, images, marker, source, title, video} = tags[tag][index];
-  toggleMarkers(marker);
+  toggleAllMarkers(marker);
   modal.querySelector(".modal-title").textContent = title;
   modal.querySelector("#carouselPlaceholder").innerHTML = carousel(images, video);
   modal.querySelector("#description").innerHTML = describe(description, source);
 });
 
-modal.addEventListener('hide.bs.modal', () => {
+modal.addEventListener("hide.bs.modal", () => {
   modal.querySelector("#carouselPlaceholder").innerHTML = "";
-})
+});
 
 function icon(name) {
   return L.icon({
@@ -191,7 +194,7 @@ function describe(text, source) {
   return text.reduce((r, e) => `${r}<p>${e}</p>`, "") + `<p><a href="${source}">Đọc thêm</a></p>`;
 }
 
-function toggleMarkers(marker, show) {
+function toggleAllMarkers(marker, show) {
   showAll = show || !showAll;
   if (filter) {
     return;
@@ -201,6 +204,7 @@ function toggleMarkers(marker, show) {
       m.addTo(map);
     } else {
       map.removeLayer(m);
+      m.selected = false;
     }
   }
   marker?.addTo(map);

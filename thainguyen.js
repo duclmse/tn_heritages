@@ -19,4 +19,5 @@ L.geoJSON(tn, {
       layer.bindPopup(`${TYPE_2} ${NAME_2}`);
     }
   },
+  style: () => ({fillColor: "#00000000"})
 }).addTo(map);

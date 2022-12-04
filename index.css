@@ -28,22 +28,19 @@ li {
 
 .legend {
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0;
     border: solid rgba(0, 0, 0, .6);
-    border-radius: 10px 10px 0 0;
-    border-width: 1px 1px 0 1px;
+    border-radius: 0 10px 0 0;
+    border-width: 1px 1px 0 0;
     background: white;
-    text-align: center;
+    text-align: left;
     width: max-content;
     position: fixed;
     z-index: 999;
-    display: flex;
-    justify-content: center;
 }
 
-.legend>span {
-    padding: 10px;
+.legend td {
+    padding: 5px;
 }
 
 .accordion {

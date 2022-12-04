@@ -374,7 +374,6 @@ let heritages = [
     ],
     "source": "http://ditichhochiminhphuchutich.gov.vn/ve-ngoi-truong-mang-ten-lanh-tu-nguyen-ai-quoc-ho-chi-minh-2834",
   },
-
   {
     "title": "Xưởng Đội Cấn – Nhà máy Quân giới K77",
     "tag": "Định Hóa",
@@ -694,7 +693,6 @@ let heritages = [
     "source":
       "http://thainguyentourism.vn/vi/du-khach/Kham-pha-diem-den/Di-tich-lich-su-va-thang-canh-chua-Hang-huyen-Dinh-Hoa-234.html",
   },
-
   {
     "title": "Địa điểm nơi ở và làm việc của Chủ Tịch Hồ Chí Minh (1954) tại đồi Thành Trúc",
     "tag": "Đại Từ",
@@ -869,7 +867,7 @@ let heritages = [
       "Đội ngũ 43 học viên và 29 giảng viên của trường dạy làm báo Huỳnh Thúc Kháng chính là những viên gạch đầu tiên đặt nền móng vững chắc cho sự phát triển và trưởng thành của báo chí cách mạng Việt Nam suốt những năm qua; mở ra kỷ nguyên mới cho lịch sử báo chí Việt Nam.",
       "Ngày 4/4/2019, tại xã Tân Thái, huyện Đại Từ (tỉnh Thái Nguyên), Hội Nhà báo Việt Nam phối hợp với UBND tỉnh Thái Nguyên tổ chức Lễ kỉ niệm 70 năm Trường Dạy làm báo Huỳnh Thúc Kháng và đón nhận bằng Di tích lịch sử cấp Quốc gia.",
     ],
-    "location": [21.7333568,105.7392653],
+    "location": [21.5890885,105.711907],
     "images": [
       {
         "url": "https://dulichthongminhthainguyen.vn/storage/places/July2022/218.jpg",
@@ -914,7 +912,6 @@ let heritages = [
     "source":
       "https://daitu.thainguyen.gov.vn/di-tich-lich-su/-/asset_publisher/TDSlc8L6ftJm/content/di-tich-lich-su-ia-iem-le-nhan-quoc-thu-au-tien-cua-nuoc-viet-nam-dan-chu-cong-hoa-01-9-1954-su-kien-lich-su-va-gia-tri-tieu-bieu",
   },
-
   {
     "title": "Chùa Hang – Kim Sơn Tự (huyện Đồng Hỷ)",
     "tag": "Đồng Hỷ",
@@ -947,7 +944,6 @@ let heritages = [
       },
     ],
   },
-
   {
     "title":
       "Cụm di tích Kha Sơn (chùa Mai Sơn, chùa Làng Ca, rừng Rác, nhà ông Cao Nhật, Đình Kha Sơn Hạ, Đình Kha Sơn Thượng)",
@@ -1139,7 +1135,6 @@ let heritages = [
     ],
     "source": "http://thainguyentourism.vn/vi/du-khach/Kham-pha-diem-den/Ngoi-dinh-co-Xuan-La-148.html",
   },
-
   {
     "title": "Nơi thành lập Sư đoàn 308, Đại đoàn Quân tiên phong",
     "tag": "Phú Lương",
@@ -1251,7 +1246,6 @@ let heritages = [
     "source":
       "http://dsvh.gov.vn/dia-diem-to-chuc-lop-huan-luyen-dau-tien-va-dong-quan-cua-truong-can-bo-cung-cap-1951-1954-tinh-thai-nguyen-3394",
   },
-
   {
     "title": "Địa điểm lưu niệm Chủ Tịch Hồ Chí Minh về thăm khu Công Nghiệp Gang thép Thái Nguyên",
     "tag": "Thái Nguyên",
@@ -1402,7 +1396,6 @@ let heritages = [
     ],
     "source": "https://baothainguyen.vn/dat-va-nguoi-thai-nguyen/202108/di-tich-lich-su-cang-ba-van-367E6C8/",
   },
-
   {
     "title": "Đền Lục Giáp (Miếu Vật)",
     "tag": "Sông Công",
@@ -1425,7 +1418,6 @@ let heritages = [
     ],
     "source": "https://baothainguyen.vn/dat-va-nguoi-thai-nguyen/lich-su-danh-thang/200908/den-luc-giap-367C981/",
   },
-
   {
     "title": "Đền thờ Tiến sĩ Đỗ Cận",
     "tag": "Phổ Yên",
@@ -1695,7 +1687,7 @@ let heritages = [
     ],
     "source":
       "http://tailieudientu.lrc.tnu.edu.vn/Upload/Collection/brief/brief_54866_59231_16220179252nguyenthithuylinh.pdf",
-    "video": "https://www.youtube.com/embed/MApZbiZ7OvE",
+    "video": "https://www.youtube.com/embed/1ba-_vmO3tU",
   },
   {
     "title": "Lễ hội Lồng Tồng - dân tộc Tày (huyện Định Hóa)",
