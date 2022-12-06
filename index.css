@@ -1,116 +1,121 @@
 html,
 body {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .title {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border: solid rgba(0, 0, 0, .6);
-    border-radius: 0 0 10px 10px;
-    border-width: 0 1px 1px 1px;
-    background: white;
-    text-align: center;
-    width: max-content;
-    position: fixed;
-    z-index: 999;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: solid rgba(0, 0, 0, 0.6);
+  border-radius: 0 0 10px 10px;
+  border-width: 0 1px 1px 1px;
+  background: white;
+  text-align: center;
+  width: max-content;
+  position: fixed;
+  z-index: 999;
 }
 
 .title p {
-    margin: 5px;
+  margin: 5px;
 }
 
 .legend {
-    bottom: 0;
-    left: 0;
-    border: solid rgba(0, 0, 0, .6);
-    border-radius: 0 10px 0 0;
-    border-width: 1px 1px 0 0;
-    background: white;
-    text-align: left;
-    width: max-content;
-    position: fixed;
-    z-index: 999;
+  bottom: 0;
+  left: 0;
+  border: solid rgba(0, 0, 0, 0.6);
+  border-radius: 0 10px 0 0;
+  border-width: 1px 1px 0 0;
+  background: white;
+  text-align: left;
+  width: max-content;
+  position: fixed;
+  z-index: 999;
 }
 
 .legend td {
-    padding: 5px;
+  padding: 5px;
 }
 
 .accordion {
-    top: 50%;
-    right: 0;
-    width: 250px;
-    position: fixed;
-    z-index: 999;
+  top: 50%;
+  right: 0;
+  width: 250px;
+  position: fixed;
+  z-index: 999;
 }
 
 .scroll {
-    max-height: 300px;
-    overflow: auto;
+  max-height: 300px;
+  overflow: auto;
 }
 
 .shadow {
-    text-shadow: 0 0 2px #000;
+  text-shadow: 0 0 2px #000;
 }
 
 .carousel-item img {
-    max-height: 80vh;
-    min-width: auto;
+  max-height: 80vh;
+  min-width: auto;
 }
 
 .accordion-button {
-    padding: 7px;
+  padding: 7px;
 }
 
 .accordion-body li {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .intangible {
-    color: #881111;
+  color: #881111;
+}
+
+@media screen and (min-width: 768px) {
+  .accordion {
+    transform: translate(0, -50%);
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .accordion {
-        transform: translate(0, -50%);
-    }
-    .legend {
-        display: none;
-    }
+  .accordion {
+    transform: translate(0, -50%);
+  }
+  .legend {
+    display: none;
+  }
 }
 @media screen and (max-width: 480px) {
-    .title {
-        width: 100%;
-        border-radius: 0;
-        border-width: 0 0 1px;
-    }
+  .title {
+    width: 100%;
+    border-radius: 0;
+    border-width: 0 0 1px;
+  }
 
-    .leaflet-top.leaflet-left {
-        margin-top: 60px;
-    }
+  .leaflet-top.leaflet-left {
+    margin-top: 60px;
+  }
 
-    .title .author, .title img {
-        display: none;
-    }
+  .title .author,
+  .title img {
+    display: none;
+  }
 
-    .accordion .accordion-item:not(:first-child) {
-        display: none;
-    }
+  .accordion .accordion-item:not(:first-child) {
+    display: none;
+  }
 
-    .accordion {
-        transform: translate(0, calc(50% - 30px));
-        width: 100vw;
-        position: fixed;
-        z-index: 999;
-        bottom: calc(-50vh + 20px);
-    }
-
-
+  .accordion {
+    transform: translate(0, calc(50% - 30px));
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+    bottom: calc(-50vh + 20px);
+  }
 }
