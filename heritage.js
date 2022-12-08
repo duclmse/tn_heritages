@@ -1713,6 +1713,7 @@ let heritages = [
       "Khi tấm vải được cắt đứt, thày mẹ và con hương nằm xuống sàn, thày Bố lấy chăn phủ lên người con hương như một động tác đón nhận và che chở cho đứa con mới được sinh ra, sau đó các thày đi xung quang con hương đọc lời cúng ma cho con hương, một mâm bánh trôi được mang đến, thày Mẹ gắp bánh trôi cho đứa con vừa mới được sinh ra. Thày Bố, thày Mẹ cùng một thày phụ cho thày Bố đứng ra chải đầu, cắt tóc cho con hương, sau đó 3 thày lấy kim châm vào đầu con hương như để dặn dò, dạy bảo cho con hương thông suốt mọi việc.",
       "Lễ cấp sắc thực chất là một cuộc đại diễn xướng bởi nó tập trung khá nhiều hình thức nghệ thuật biểu diễn như hát, khí cụ, sân khấu nhập đồng, trò diễn; sự kết hợp nhuần nhuyễn các yếu tố trên đã tạo nên sức hấp dẫn của Lễ cấp sắc của người Nùng nói chung cũng như tại huyện Đồng Hỷ nói riêng.",
     ],
+    "video": "https://www.youtube.com/embed/dY8clj8ds0U",
     "source": "https://baothainguyen.vn",
   },
   {

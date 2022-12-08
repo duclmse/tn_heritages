@@ -15,17 +15,20 @@ heritages.map(e => {
   if (location && location.length !== 0) {
     let [lat, lng] = location;
     let popup = makePopup(lat, lng, tag, title);
-    let marker = L.marker(location, {icon: intangible ? redIcon : blueIcon}).addTo(map).bindPopup(popup);
+    let marker = L.marker(location, {icon: intangible ? redIcon : blueIcon})
+      .addTo(map)
+      .bindPopup(popup);
+    let lastMarker = null;
     marker.selected = false;
     marker.on("click", () => {
-      marker.selected = true;
-      toggleAllMarkers(marker);
+      marker.selected = !marker.selected;
     });
     marker.on("mouseover", () => {
       if (!marker.selected) marker.openPopup();
     });
-    marker.on("mouseout", () => {
-      if (!marker.selected) marker.closePopup();
+    marker.on("mouseout", function () {
+      console.log(`mouseout ${this.selected}`);
+      if (!this.selected) marker.closePopup();
     });
     markers.push(marker);
     e.marker = marker;
@@ -42,7 +45,10 @@ heritages.map(e => {
   }
 });
 
-map.fitBounds([[21.3, 105.4], [22.1, 106.3]]);
+map.fitBounds([
+  [21.3, 105.4],
+  [22.1, 106.3],
+]);
 let accItems = [];
 let key = 0;
 for (let tag in tags) {
@@ -82,7 +88,7 @@ search.addEventListener("input", () => {
 });
 
 let modal = document.getElementById("staticBackdrop");
-modal.addEventListener("show.bs.modal", (event) => {
+modal.addEventListener("show.bs.modal", event => {
   let button = event.relatedTarget;
   let tag = button.getAttribute("data-tag");
   let index = parseInt(button.getAttribute("data-index"));
@@ -110,11 +116,16 @@ function icon(name) {
 }
 
 function makePopup(lat, lng, tag, title) {
-  return L.popup().setContent(`<p>${title}</p>
+  return L.popup().setContent(
+    `<p>${title}</p>
     <p>
-        <span><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${tag}" data-index="${tags[tag]?.length || 0}">Chi tiết</a></span> | 
+        <span><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${tag}" data-index="${
+      tags[tag]?.length || 0
+    }">Chi tiết</a></span> | 
         <span><a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank">Chỉ đường</a></span>
-    </p>`, {keepInView: true});
+    </p>`,
+    {keepInView: true}
+  );
 }
 
 function accItem(key, name, content) {
@@ -144,17 +155,17 @@ function accBody(key, name, content) {
 
 function contentList(index, name, content) {
   let {title, intangible} = content;
-  return (`<li class="${intangible && "intangible"}">
+  return `<li class="${intangible && "intangible"}">
       <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-tag="${name}" data-index="${index}">
         ${title}
       </a>
-    </li>`);
+    </li>`;
 }
 
 function carousel(images, video) {
   if (video) {
-    return (`<iframe width="100%" height="100%" src="${video}" allowfullscreen></iframe>
-      <p><a href="${video}"></ahref></p>  `);
+    return `<iframe width="100%" height="100%" src="${video}" allowfullscreen></iframe>
+      <p><a href="${video}"></ahref></p>  `;
   }
   if (!images) return "";
   let {indicators, inner} = carouselContent(images);
@@ -185,7 +196,9 @@ function carouselContent(images) {
       <img src="${url}" class="d-block w-100 img-responsive" alt="${description}">
       <div class="carousel-caption d-none d-md-block shadow">${description}</div>
     </div>`);
-    indicators.push(`<button type="button" data-bs-target="#carousel" data-bs-slide-to="${i}" aria-label="${description}" ${ind}></button>`);
+    indicators.push(
+      `<button type="button" data-bs-target="#carousel" data-bs-slide-to="${i}" aria-label="${description}" ${ind}></button>`
+    );
   }
   return {indicators: indicators.join(""), inner: inner.join("")};
 }
@@ -204,17 +217,15 @@ function toggleAllMarkers(marker, show) {
       m.addTo(map);
     } else {
       map.removeLayer(m);
-      m.selected = false;
     }
   }
   marker?.addTo(map);
   marker?.openPopup();
 }
 
-((cl) => {
+(cl => {
   const elements = document.getElementsByClassName(cl);
   while (elements.length > 0) {
     elements[0].parentNode.removeChild(elements[0]);
   }
-
 })("leaflet-control-attribution");
