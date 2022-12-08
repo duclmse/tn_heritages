@@ -37,6 +37,10 @@ heritages.map(e => {
       console.log(`mouseout ${this.selected}`);
       if (!marker.selected) marker.closePopup();
     });
+    marker.getPopup().on("remove", function () {
+      selected = false;
+      lastMarker = null;
+    });
     markers.push(marker);
     e.marker = marker;
     e.display = true;
