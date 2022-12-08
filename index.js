@@ -10,6 +10,8 @@ let tags = {};
 let markers = [];
 let showAll = true;
 let filter = false;
+let lastMarker = null;
+let selected = false;
 heritages.map(e => {
   let {location, tag, title, intangible} = e;
   if (location && location.length !== 0) {
@@ -18,17 +20,22 @@ heritages.map(e => {
     let marker = L.marker(location, {icon: intangible ? redIcon : blueIcon})
       .addTo(map)
       .bindPopup(popup);
-    let lastMarker = null;
     marker.selected = false;
     marker.on("click", () => {
       marker.selected = !marker.selected;
+      lastMarker = !lastMarker ? marker : null;
+      selected = marker.selected;
+      if (selected) {
+        marker.openPopup();
+      }
     });
     marker.on("mouseover", () => {
+      if (selected || lastMarker != null) return;
       if (!marker.selected) marker.openPopup();
     });
-    marker.on("mouseout", function () {
+    marker.on("mouseout", () => {
       console.log(`mouseout ${this.selected}`);
-      if (!this.selected) marker.closePopup();
+      if (!marker.selected) marker.closePopup();
     });
     markers.push(marker);
     e.marker = marker;
@@ -73,6 +80,8 @@ search.addEventListener("input", () => {
     filter = false;
   }
   filter = true;
+  selected = false;
+  lastMarker = null;
   heritages.forEach(h => {
     if (!h.ltitle || !h.ldescription) return;
     if (h.ltitle.includes(input.toLowerCase()) || h.ldescription.some(e => e.includes(input))) {
